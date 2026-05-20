@@ -33,3 +33,4 @@ with sync_playwright() as p:
         print("FOUND BUY")
     else:
         print("Still sold out")
+send_telegram("✅ 테스트 성공! 텔레그램 연결 완료")
