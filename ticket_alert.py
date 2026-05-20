@@ -28,11 +28,11 @@ with sync_playwright() as p:
 
     browser.close()
 
-    if "BUY" in html:
+    if "SOLD OUT" not in html:
         send_telegram(
     "🎟️ Vienna Philharmonic · Muti 취소표 떴다!!!\n\n"
     "https://www.salzburgerfestspiele.at/en/p/vienna-philhamonic-muti-2026"
 )
-        print("FOUND BUY")
+        print("FOUND ticket")
     else:
         print("Still sold out")
